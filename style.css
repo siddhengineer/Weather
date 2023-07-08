@@ -9,3 +9,36 @@ body {
     background-color: #242424;
 
 }
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #00a9fe, #271214);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: =40px 35px;
+    text-align: center;
+
+}
+
+.search {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search
