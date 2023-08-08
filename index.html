@@ -52,7 +52,7 @@
         const searchBtn = document.querySelector(".search button");
 
         const weatherImg = document.querySelector(".weather-icon");
-
+        const card = document.querySelector(".card");
 
         async function checkWeather(city) {
             const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -71,22 +71,28 @@
                 document.querySelector(".wind").innerHTML = data.wind.speed + "kmph";
                 if (data.weather[0].main == 'Clouds') {
                     weatherImg.src = "images/clouds.png";
+                    card.style.backgroundImage = "linear-gradient(180deg, lightgray, gray)";
                 }
                 else if (data.weather[0].main == 'Clear') {
                     weatherImg.src = "images/clear.png";
+                    card.style.backgroundImage = "linear-gradient(180deg, skyblue, deepskyblue)";
                 }
                 else if (data.weather[0].main == 'Drizzle') {
                     weatherImg.src = "images/drizzle.png";
+                    card.style.backgroundImage = "linear-gradient(180deg, lightblue, dodgerblue)";
                 }
 
                 else if (data.weather[0].main == 'Rain') {
                     weatherImg.src = "images/rain.png";
+                    card.style.backgroundImage = "linear-gradient(180deg, black, darkblue)";
                 }
                 else if (data.weather[0].main == 'Mist') {
                     weatherImg.src = "images/mist.png";
+                    card.style.backgroundImage = "linear-gradient(180deg, lightergrey, darkergrey)";
                 }
                 else if (data.weather[0].main == 'Snow') {
                     weatherImg.src = "images/snow.png";
+                    card.style.backgroundImage = "linear-gradient(180deg, white, lightergrey)";
                 }
                 document.querySelector(".weather").style.display = "block";
                 document.querySelector(".error").style.display = "none";
